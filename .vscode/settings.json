@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "attributify",
+    "codemirror",
+    "composables",
+    "demi",
+    "docsearch",
+    "hljs",
+    "prismjs",
+    "splitpanes"
+  ],
+  "eslint.packageManager": "pnpm",
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "eslint.workingDirectories": [
+    { "directory": ".vitepress" }
+  ],
+  "windicss.sortOnSave": false
+}
