@@ -1,17 +1,17 @@
 [windi css]: https://github.com/windicss/windicss
 
-# Windi CSS Documentation
+# Documentação em Português da Wind CSS
 
-This is the documentation website for [Windi CSS].
+Este repositório de código representa a página da [Windi CSS].
 
 https://windicss.org
 
-## Development
+## Desenvolvimento
 
 ```bash
 pnpm i
-// run only dev server
+// executar apenas o servidor de desenvolvimento
 pnpm dev
-// run dev server with functions
+// executar o servidor de desenvolvimento com as funções
 pnpm functions
 ```
