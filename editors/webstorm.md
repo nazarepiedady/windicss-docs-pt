@@ -1,7 +1,7 @@
 <Logo name="webstorm" class="logo-float-xl"/>
 
-# WebStorm Intellisense
+# Sensor Inteligente da WebStorm
 
-The support for WebStorm is on our roadmap, but we haven't got enough bandwidth to work on it yet.
+O suporte para WebStorm está no nosso mapa de estradas, mas ainda não conseguimos largura de banda suficiente para trabalhar sobre ele.
 
-Join the waitlist by [upvoting this comment](https://github.com/windicss/windicss/discussions/136#discussioncomment-557097). Thank you.
+Junta-te a lista de espera ao [votar este comentário](https://github.com/windicss/windicss/discussions/136#discussioncomment-557097). Obrigado.
