@@ -1,80 +1,80 @@
-# Utilities
+# Utilitários
 
-## General
+## Geral
 
-- [Colors](/utilities/general/colors)
-- [Typography](/utilities/general/typography)
-- [SVG](/utilities/general/svg)
-- [Variants](/utilities/general/variants)
+- [Cores](/utilities/general/colors)
+- [Tipografia](/utilities/general/typography)
+- [Gráficos de Vetores Escaláveis (SVG)](/utilities/general/svg)
+- [Variantes](/utilities/general/variants)
 
-## Accessibility
+## Acessibilidade
 
-- [Screen Readers](/utilities/accessibility/screen-readers)
+- [Leitores de Tela](/utilities/accessibility/screen-readers)
 
-## Animations
+## Animações
 
-- [Animation](/utilities/animations/animation)
-- [Transforms](/utilities/animations/transforms)
-- [Transitions](/utilities/animations/transitions)
+- [Animação](/utilities/animations/animation)
+- [Transformações](/utilities/animations/transforms)
+- [Transições](/utilities/animations/transitions)
 
-## Backgrounds
+## Fundos
 
-- [Background](/utilities/backgrounds/background)
-- [Gradients](/utilities/backgrounds/gradients)
-- [Background Blend Mode](/utilities/backgrounds/background-blend-mode)
+- [Fundo](/utilities/backgrounds/background)
+- [Gradientes](/utilities/backgrounds/gradients)
+- [Modo de Combinação de Fundo](/utilities/backgrounds/background-blend-mode)
 
-## Behaviors
+## Comportamentos
 
-- [Box Decoration Break](/utilities/behaviors/box-decoration-break)
-- [Image Rendering](/utilities/behaviors/image-rendering)
-- [Listings](/utilities/behaviors/listings)
-- [Overflow](/utilities/behaviors/overflow)
-- [Overscroll Behavior](/utilities/behaviors/overscroll-behavior)
-- [Placeholder](/utilities/behaviors/placeholder)
+- [Quebra da Decoração da Caixa](/utilities/behaviors/box-decoration-break)
+- [Apresentação de Imagem](/utilities/behaviors/image-rendering)
+- [Listagens](/utilities/behaviors/listings)
+- [Transbordamento do Fluxo](/utilities/behaviors/overflow)
+- [Comportamento sobre Deslocamento](/utilities/behaviors/overscroll-behavior)
+- [Segurador de Espaço](/utilities/behaviors/placeholder)
 
-## Borders
+## Bordas
 
-- [Border](/utilities/borders/border)
-- [Divider](/utilities/borders/divider)
-- [Outline](/utilities/borders/outline)
-- [Ring](/utilities/borders/ring)
+- [Borda](/utilities/borders/border)
+- [Separador](/utilities/borders/divider)
+- [Contorno](/utilities/borders/outline)
+- [Círculo](/utilities/borders/ring)
 
-## Effects
+## Efeitos
 
-- [Box Shadow](/utilities/effects/box-shadow)
-- [Opacity](/utilities/effects/opacity)
-- [Mix Blend Mode](/utilities/effects/mix-blend-mode)
+- [Sombra da Caixa](/utilities/effects/box-shadow)
+- [Opacidade](/utilities/effects/opacity)
+- [Modo de Combinação da Mistura](/utilities/effects/mix-blend-mode)
 
-## Filters
+## Filtros
 
-- [Filter](/utilities/filters/filter)
-- [Backdrop Filter](/utilities/filters/backdrop-filter)
+- [Filtro](/utilities/filters/filter)
+- [Filtro de Pano de Fundo](/utilities/filters/backdrop-filter)
 
-## Interactivity
+## Interatividade
 
-- [Accent Color](/utilities/interactivity/accent-color)
-- [Appearance](/utilities/interactivity/appearance)
-- [Cursor](/utilities/interactivity/cursor)
+- [Cor de Ênfase](/utilities/interactivity/accent-color)
+- [Aparência](/utilities/interactivity/appearance)
+- [Ponteiro do Rato](/utilities/interactivity/cursor)
 - [Caret](/utilities/interactivity/caret)
-- [Pointer Events](/utilities/interactivity/pointer-events)
-- [Resize](/utilities/interactivity/resize)
-- [Scroll Behavior](/utilities/interactivity/scroll-behavior)
-- [Touch Action](/utilities/interactivity/touch-action)
-- [User Select](/utilities/interactivity/user-select)
-- [Will Change](/utilities/interactivity/will-change)
+- [Eventos de Ponteiro](/utilities/interactivity/pointer-events)
+- [Redimensionamento](/utilities/interactivity/resize)
+- [Comportamento do Deslocamento](/utilities/interactivity/scroll-behavior)
+- [Ação de Toque](/utilities/interactivity/touch-action)
+- [Seleção do Utilizador](/utilities/interactivity/user-select)
+- [Alteração Futura](/utilities/interactivity/will-change)
 
-## Layout
+## Esquema
 
-- [Columns](/utilities/layout/columns)
-- [Container](/utilities/layout/container)
-- [Display](/utilities/layout/display)
-- [Flexbox](/utilities/layout/flexbox)
-- [Grid](/utilities/layout/grid)
-- [Positioning](/utilities/layout/positioning)
-- [Sizing](/utilities/layout/sizing)
-- [Spacing](/utilities/layout/spacing)
-- [Tables](/utilities/layout/tables)
+- [Colunas](/utilities/layout/columns)
+- [Contentor](/utilities/layout/container)
+- [Exibição](/utilities/layout/display)
+- [Caixa Flexível](/utilities/layout/flexbox)
+- [Grade](/utilities/layout/grid)
+- [Posicionamento](/utilities/layout/positioning)
+- [Ajuste de Tamanho](/utilities/layout/sizing)
+- [Espaçamento](/utilities/layout/spacing)
+- [Tabelas](/utilities/layout/tables)
 
-::: tip
-Use the search bar to quickly find the utilities you need.
+:::tip Dica
+Use a barra de busca para encontrar rapidamente os utilitários que precisas.
 :::
