@@ -1,79 +1,80 @@
 <Logo name="vscode" class="logo-float-xl"/>
 
-# Windi CSS Intellisense for VS Code
+# Sensor Inteligente da Windi CSS para o VS Code
 
 <PackageInfo name="windicss-intellisense" :hideNpm="true" author="voorjaar" />
 
-Windi CSS IntelliSense enhances the Windi development experience by providing Visual Studio Code users with advanced features such as autocomplete, syntax highlighting, code folding, and building.
+O sensor inteligente da Windi CSS melhora a experiência de programação da Windi ao fornecer aos utilizadores de Visual Studio Code funcionalidades avançadas tais como conclusão automática da escrita de código, destacamento da sintaxe, articulação de código, e construção.
 
-## Installation
+## Instalação
 
-**[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense)**
+**[Instalar através do Mercado do Visual Studio Code →](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense)**
 
-**[Install via the Open VSX Registry →](https://open-vsx.org/extension/voorjaar/windicss-intellisense)**
+**[Instalar através da Abertura do Registo de VSX →](https://open-vsx.org/extension/voorjaar/windicss-intellisense)**
 
-This plugin packs a windicss compiler, so you can use it without installing windicss, and it also supports the configuration file `(tailwind|windi).config.(js|cjs|ts)`.
+Esta extensão empacota um compilador de windicss, assim podes usá-lo sem a instalação da windicss, e também suporta o ficheiro de configuração `(tailwind|windi).config.(js|cjs|ts)`.
 
-## Features
+## Funcionalidades
 
-### Autocomplete
+### Conclusão Automática da Escrita de Código
 
-Intelligent suggestions for utilities and variants.
+Sugestões inteligentes para os utilitários e variantes.
 
-<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/completion.png" alt="Auto Complete"/>
+<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/completion.png" alt="Conclusão Automática da Escrita de Código"/>
 
-### Hover Preview
+### Pré-visualização ao Pairar
 
-See the complete CSS for a class name by hovering over it.
+Veja o CSS completo para um nome de classe ao pairar o ponteiro do rato sobre ela.
 
-<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/hover.png" alt="Hover Preview"/>
+<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/hover.png" alt="Pré-visualização ao Pairar"/>
 
-### Syntax Highlighting
+### Destacamento de Sintaxe
 
-Highlight utilities, variants and importants.
+Destaque os utilitários, variantes e os importantes.
 
-<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/highlight.png" alt="Syntax Highlighting"/>
+<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/highlight.png" alt="Destacamento de Sintaxe"/>
 
-### Color Preview
+### Pré-visualização de Cor
 
-Preview color and spectrum.
+Pré-visualize a color e o espetro.
 
-<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/color.png" alt="Color Preview"/>
+<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/color.png" alt="Pré-visualização de Cor
+"/>
 
-### Code Folding
+### Articulação de Código
 
-Fold overly long classes to increase readability.
+Enrole as classes demasiadamente longas para aumentar a legibilidade.
 
-<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/highlight.png" alt="Code Folding"/>
+<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/highlight.png" alt="Articulação de Código"/>
 
-### Compile Commands
+### Comandos de Compilação
 
-Built-in commands, one-key operation.
+Comandos embutidos, operação uma tecla.
 
-<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/commands.png" alt="Compile Commands"/>
+<img src="https://raw.githubusercontent.com/windicss/windicss-intellisense/main/screenshots/commands.png" alt="Comandos de Compilação"/>
 
-## Extension Settings
+## Definições da Extensão
 
-| Settings                           | type    | default  | description                                                  |
+| Definições                           | Tipo    | Valor Predefinido  | Descrição                                                  |
 | :--------------------------------- | :------ | :------- | :----------------------------------------------------------- |
-| `windicss.enableColorDecorators`   | boolean | true     | Enable Color Decorators.                                     |
-| `windicss.enableHoverPreview`      | boolean | true     | Enable hover className to show preview of CSS.               |
-| `windicss.enableCodeCompletion`    | boolean | true     | Enable/Disable all code completions.                         |
-| `windicss.enableUtilityCompletion` | boolean | true     | Enable Utility Completion.                                   |
-| `windicss.enableVariantCompletion` | boolean | true     | Enable Variant Completion.                                   |
-| `windicss.enableDynamicCompletion` | boolean | true     | Enable Dynamic Utilities Completion like p-${int}.           |
-| `windicss.enableRemToPxPreview`    | boolean | true     | Enable Rem to Px Preview.                                    |
-| `windicss.enableCodeFolding`       | boolean | true     | Enable ClassNames Code Folding.                              |
-| `windicss.foldByLength`            | boolean | false    | Folding code by length. Default option is false, will fold by utility count. |
-| `windicss.foldCount`               | number  | 3        | Used by foldByCount.                                         |
-| `windicss.foldLength`              | number  | 25       | Used by foldByLength                                         |
-| `windicss.hiddenText`              | string  | ` ...`   | Placeholder used when folding code.                          |
-| `windicss.hiddenTextColor`         | string  | \#AED0A4 | Placeholder Color.                                           |
-| `windicss.sortOnSave`              | boolean | false    | Runs class sorting on file save.                             |
+| `windicss.enableColorDecorators`   | boolean | true     | Ativar os Decoradores de Cor.                                     |
+| `windicss.enableHoverPreview`      | boolean | true     | Ativar o pairar sobre o nome da classe para pré-visualizar a CSS.               |
+| `windicss.enableCodeCompletion`    | boolean | true     | Ativar/Desativar todas conclusões automáticas de escrita de código.                         |
+| `windicss.enableUtilityCompletion` | boolean | true     | Ativar a Conclusão de Utilitário.                                   |
+| `windicss.enableVariantCompletion` | boolean | true     | Ativar a Conclusão de Variante.                                   |
+| `windicss.enableDynamicCompletion` | boolean | true     | Ativar Conclusão Utilitários Dinâmicos como p-${int}.           |
+| `windicss.enableRemToPxPreview`    | boolean | true     | Ativar a pré-visualização da conversão de REM para PX.                                    |
+| `windicss.enableCodeFolding`       | boolean | true     | Ativar a Articulação de Código de Nomes de Classe.                             |
+| `windicss.foldByLength`            | boolean | false    | Código articulado por comprimento. A opção padrão é falsa, enrolará pela contagem utilitário. |
+| `windicss.foldCount`               | number  | 3        | Usado pelo `foldByCount`.                                         |
+| `windicss.foldLength`              | number  | 25       | Usado pelo `foldByLength`.                                         |
+| `windicss.hiddenText`              | string  | ` ...`   | Segurador de Espaço usado quando articula-se o código.                          |
+| `windicss.hiddenTextColor`         | string  | \#AED0A4 | Cor do Segurador de Espaço.                                          |
+| `windicss.sortOnSave`              | boolean | false    | Executa o ordenamento de classe sobre o guardar do ficheiro.                             |
 
-## For more information
+## Para Mais Informações
 
 * [Windi CSS](https://github.com/windicss/windicss)
-* [Documentation](https://windicss.org)
-* [Discussions](https://github.com/windicss/windicss/discussions)
-* [Issues](https://github.com/windicss/windicss-intellisense/issues)
+* [Documentação](https://windicss.org)
+* [Discussões](https://github.com/windicss/windicss/discussions)
+* [Questões](https://github.com/windicss/windicss-intellisense/issues)
