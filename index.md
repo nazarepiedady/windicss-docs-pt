@@ -3,19 +3,19 @@ home: true
 
 heroText: Windi CSS
 
-actionText: Get Started
+actionText: Começar 
 actionLink: /guide/
 
-altActionText: Learn More
+altActionText: Saiba Mais
 altActionLink: /features/
 
 heroImage: /assets/logo.svg
-heroAlt: Windi CSS logo
+heroAlt: Logótipo da Windi CSS
 
-newsTitle: 👉 Check out new features in Windi CSS v3.4
+newsTitle: 👉 Consulte as novas funcionalidades da Windi CSS v3.4
 newsLink: /posts/v34.html
 
-footer: MIT Licensed | Copyright © 2020-2021 Windi CSS Contributors
+footer: Licenciada sob MIT | Copyright © 2020-2021 Colaboradores da Windi CSS
 ---
 
 <Sponsors />
@@ -49,6 +49,6 @@ dark:\(from-teal-400 to-yellow-500)`"
 
 <p class="flex justify-center opacity-75 mt-12">
   <a href="https://www.netlify.com" rel="noreferrer" target="_blank">
-    <img src="/assets/netlify.svg" alt="Deploys by Netlify">
+    <img src="/assets/netlify.svg" alt="Implementações em Produção pela Netlify">
   </a>
 </p>
