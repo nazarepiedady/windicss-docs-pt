@@ -1,37 +1,37 @@
 [tailwind css]: https://tailwindcss.com/docs
 [tailwind css v2]: https://blog.tailwindcss.com/tailwindcss-v2
-[discussions]: https://github.com/windicss/windicss/discussions
-[GitHub Issues]: https://github.com/windicss/windicss/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
-[GitHub Discussions]: https://github.com/windicss/windicss/discussions
+[discussões]: https://github.com/windicss/windicss/discussions
+[Problemas da GitHub]: https://github.com/windicss/windicss/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
+[Discussões da GitHub]: https://github.com/windicss/windicss/discussions
 [autoprefixer]: https://autoprefixer.github.io/
-[utilities reference]: /utilities/
-[utilities]: /utilities/
-[directives]: /features/directives
+[referência de utilitários]: /utilities/
+[utilitários]: /utilities/
+[diretivas]: /features/directives
 
-[video comparison]: https://twitter.com/antfu7/status/1361398324587163648
-[options]: /guide/configuration
-[features]: /features/
+[comparação em vídeo]: https://twitter.com/antfu7/status/1361398324587163648
+[opções]: /guide/configuration
+[funcionalidades]: /features/
 
-# Getting Started
+# Começar
 
-**Windi CSS** is a next-generation utility-first CSS framework.
+A **Windi CSS** é uma abstração de CSS de próxima geração focada em utilitário.
 
-If you are already familiar with [Tailwind CSS], think about Windi CSS as an **on-demand** alternative to Tailwind, which provides faster load times, **full compatibility with Tailwind v2.0**, and a bunch of additional cool features.
+Se já estiveres familiarizado com a [Tailwind CSS], pense da Windi CSS como uma alternativa **sobre demanda** para a Tailwind, que fornece tempos de carregamento mais rápido, **compatibilidade completa com a Tailwind v2.0**, e um grupo de funcionalidades fantásticas.
 
-## Why Windi CSS?
+## Porquê a Windi CSS?
 
-A quote from the author should illustrate his motivation to create Windi CSS:
+Uma citação da parte do autor deve ilustrar a sua motivação para criar a Windi CSS:
 
-> When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s with Tailwind CSS.
+> Quando o meu projeto tornou-se muito grande e havia montes de componentes, o tempo alcançado pela compilação inicial era 3s, e atualizações instantâneas demoravam mais de 1s com a Tailwind CSS.
 > \- [@voorjaar](https://github.com/voorjaar)
 
-By scanning your HTML and CSS and generating utilities on-demand, Windi CSS is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
+Ao examinar o teu HTML e CSS e gerar os utilitários sobre demanda, a Windi CSS é capaz de fornecer [tempos de carregamento mais rápidos][comparação em vídeo] e um atualização instantânea mais rápida em desenvolvimento, e não requer purificação em produção.
 
-## Basic Usage
+## Uso Básico
 
-All [utilities] of [Tailwind CSS] are supported in Windi CSS without any extra configuration.
+Todos [utilitários] de [Tailwind CSS] são suportados na Windi CSS sem qualquer configuração extra.
 
-You can use utility classes in your components and stylesheets as usual:
+Tu podes usar as classes de utilitário nos teus componentes e folhas de estilos como de costume:
 
 ```html
 <div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2 sm:(py-4 flex items-center space-y-0 space-x-6)">
@@ -48,12 +48,12 @@ You can use utility classes in your components and stylesheets as usual:
 </div>
 ```
 
-**Only the utilities you use will generate the corresponding CSS.**
+**Só os utilitários que usares gerarão o CSS correspondente.**
 
-## Integrations
+## Integrações
 
-We provide **first-class integrations** for your favorite tools with the best developer experience on each one of them. See the [integration guides](/guide/installation) to get started!
+Nós fornecemos **integrações de primeira classe** para as tuas ferramentas favoritas com a melhor experiência de programação em cada um deles. Consulte os [guias de integração](/guide/installation) para começar!
 
-## Features
+## Funcionalidades
 
-Windi CSS offers some great features in addition to everything that's included in [Tailwind CSS v2][tailwind css v2]. Refer to the [next chapter][features] for more details.
+O Windi CSS oferece algumas excelentes funcionalidades em adição à tudo que está incluído na [Tailwind CSS v2][tailwind css v2]. Consulte o [próximo capítulo][funcionalidades] para mais detalhes.
