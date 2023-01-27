@@ -1,10 +1,10 @@
-# Installation
+# Instalação
 
-Windi CSS provides **first-class integrations** for your favorite tools. Select yours and get started.
+A Windi CSS fornece **integrações de primeira classe** para as tuas ferramentas favoritas. Selecione as tuas e comece.
 
-## Build Tools
+## Ferramentas de Construção
 
-Support for build-tools are framework-agnostic. They work for most frameworks without specific configurations.
+O suporte para ferramentas de construção são agnósticas de abstração. Eles funcionam para a maioria das abstrações sem a necessidade de configurações específicas.
 
 <Integrations class="mb-5" :items="[
   {
@@ -34,9 +34,9 @@ Support for build-tools are framework-agnostic. They work for most frameworks wi
   },
 ]"/>
 
-## Frameworks
+## Abstrações
 
-In addition to general build-tools support, we also provide integrations for the following frameworks that offer out-of-the-box experience.
+Além do suporte geral às ferramentas de construção, também fornecemos integrações para as seguintes abstrações que oferece experiência fora da caixa. 
 
 <Integrations class="mb-5" :items="[
   {
@@ -68,7 +68,7 @@ In addition to general build-tools support, we also provide integrations for the
   },
 ]"/>
 
-## Editors
+## Editores
 
 <Integrations class="mb-5" :items="[
   {
@@ -96,4 +96,4 @@ In addition to general build-tools support, we also provide integrations for the
 
 <div class="pb-5"></div>
 
-> Didn't see the framework you use? [Submit a framework request on GitHub](https://github.com/windicss/windicss/issues/new).
+> Não viste a abstração que usas? [Submeta um pedido inclusão da abstração na GitHub](https://github.com/windicss/windicss/issues/new).
