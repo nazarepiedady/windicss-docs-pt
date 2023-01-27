@@ -1,54 +1,54 @@
 [windi css]: https://github.com/windicss/windicss
 [tailwind css]: https://tailwindcss.com/docs
-[migration guide]: /guide/migration
+[guia de migração]: /guide/migration
 
-# Configuring Windi CSS
+# Configurar a Windi CSS
 
-Configuration in [Windi CSS] is similar to what you would expect in [Tailwind CSS] but with additional enhancements and features.
+A configuração na [Windi CSS] é parecida com o que esperarias na [Tailwind CSS] mas com otimizações e funcionalidades adicionais.
 
-If you are migrating from Tailwind, check out the [migration guide] first.
+Se estiveres a migrar da Tailwind, consulte primeiro o [guia de migração].
 
-## Config File
+## Ficheiro de Configuração
 
-By default, Windi CSS will search for the configuration file under your project's root. Valid filenames are:
+Por padrão, a Windi CSS procurará pelo ficheiro de configuração sob raiz do teu projeto. Os nomes de ficheiro válidos são:
 
 - `windi.config.ts`
 - `windi.config.js`
 - `tailwind.config.ts`
 - `tailwind.config.js`
 
-**Native ES module and TypeScript are supported out-of-box**, powered by [sucrase](https://github.com/alangpierce/sucrase).
+O **Módulo de ECMAScript nativo e TypeScript são suportados fora da caixa**, alimentado pelo [sucrase](https://github.com/alangpierce/sucrase).
 
-To get typecheck for your configurations, you can import the `defineConfig` function from `windicss/helpers`:
+Para conseguires a verificação de tipo para as tuas configurações, podes importar a função `defineConfig` de `windicss/helpers`:
 
 ```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-  /* configurations... */
+  /* configurações... */
 })
 ```
 
 ```js windi.config.js
-// @ts-check - enable TS check for js file
+// @ts-check - ativa verificação de TS para ficheiro JS
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-  /* configurations... */
+  /* configurações... */
 })
 ```
 
-`defineConfig` is a bypass function with type hints, which means you can also omit it if you don't need the autocompletion/typecheck.
+A `defineConfig` é uma função de contorno com sugestões de tipo, o que significa que podes omiti-lo se não precisares da conclusão automática de código / verificação de tipo.
 
 ```js windi.config.js
 export default {
-  /* configurations... */
+  /* configurações... */
 }
 ```
 
-You can use the autocompletion from your editor to see possible configuration fields. Customization for features will be described in the corresponding pages.
+Tu podes usar a conclusão automática de código a partir do teu editor para ver os possíveis campos de configuração. A personalização para as funcionalidades serão descritas nas páginas correspondentes.
 
-## Example Configuration
+## Exemplo de Configuração
 
 ```js windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -56,7 +56,7 @@ import colors from 'windicss/colors'
 import plugin from 'windicss/plugin'
 
 export default defineConfig({
-  darkMode: 'class', // or 'media'
+  darkMode: 'class', // ou 'media'
   theme: {
     extend: {
       screens: {
