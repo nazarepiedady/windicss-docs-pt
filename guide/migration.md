@@ -1,11 +1,11 @@
 [auto]: /features/value-auto-infer
 [design]: /posts/story
 
-# Migrate from Tailwind CSS
+# Migrar da Tailwind CSS
 
-## Packages
+## Pacotes
 
-Some of your dependencies are no longer required. You can remove them from your `package.json` if they were only needed for Tailwind CSS.
+Algumas das tuas dependências já não são obrigatórias. Tu podes removê-las do teu `package.json` se elas eram apenas necessárias para a Tailwind CSS.
 
 ```diff package.json
 - "tailwindcss": "*",
@@ -14,9 +14,9 @@ Some of your dependencies are no longer required. You can remove them from your 
 + "windicss": "*"
 ```
 
-## Base Styles
+## Estilos de Base
 
-You can now remove the Tailwind CSS imports from your CSS entry.
+Tu podes agora remover as importações da Tailwind CSS do teu ficheiro CSS de entrada.
 
 ```diff
 - @import 'tailwindcss/base';
@@ -24,19 +24,19 @@ You can now remove the Tailwind CSS imports from your CSS entry.
 - @import 'tailwindcss/utilities';
 ```
 
-(Optional) Based on the integration tools you are using, you might need to import the `virtual:windi.css` entry explicitly. Please check the docs of the tools for more details.
+(Opcional) Baseado nas ferramentas de integração que estiveres a usar, podes precisar de importar a entrada `virtual:windi.css` explicitamente. Consulte a documentação das ferramentas para mais detalhes.
 
 ```js main.js
 import 'virtual:windi.css'
 ```
 
-## Configurations
+## Configurações
 
-Since all variants are [automatically enabled][auto], `variant` and `purge` fields are no longer needed.
+Já que todas as variantes são [ativadas automaticamente][auto], os campos `variant` e `purge` já não são necessários.
 
-`colors` and `plugins` need to be imported from `windicss` instead.
+Os `colors` e `plugins` precisam ser importados a partir de `windicss`.
 
-We are compatible with both `windi.config.js` and `tailwind.config.js`.
+Nós somos compatíveis com ambos `windi.config.js` e `tailwind.config.js`.
 
 ```diff windi.config.js
 -const colors = require('tailwindcss/colors')
@@ -74,9 +74,9 @@ export default {
 }
 ```
 
-## Cleanup (optional)
+## Limpeza (opcional)
 
-The following files can be removed if you don't use their other features.
+Os seguintes ficheiros podem ser removidos se não usas outras das suas funcionalidades.
 
 ```diff
 - postcss.config.js
