@@ -1,14 +1,12 @@
-# Extractions
+# Extrações
 
-Windi CSS relies on **static scanning and extractions** on your source files to find your utility usages and generate the equivalent CSS on-demand. Similar to [Tailwind's Purge limitation](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), you will need to use the static full names of utilities for Windi CSS to detect them correctly. For instance,
-
-String concatenations CANNOT be extracted statically:
+A Windi CSS depende da **exames e extrações estáticas** dos teus ficheiros de código-fonte para encontrar o teu uso de utilitário e gerar o CSS equivalente sobre demanda. Similar a [limitação de Purgação da Tailwind](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), precisarás usar os nomes estáticos completos dos utilitários para a Windi CSS detetá-los corretamente. Por exemplo, concatenações de sequências de caracteres (String, em Inglês) NÃO PODEM SER extraídas estaticamente:
 
 ```html
 <div class="text-${ active ? 'green' : 'orange' }-400"></div>
 ```
 
-Use the full names of utilities instead:
+No lugar de exemplo de cima use os nomes completos dos utilitários:
 
 ```html
 <div class="${ active ? 'text-green-400' : 'text-orange-400' }"></div>
@@ -16,13 +14,13 @@ Use the full names of utilities instead:
 
 ## Safelist
 
-Sometimes you'll have to use dynamic concatenations:
+Algumas vezes terás de usar concatenações dinâmicas:
 
 ```html
 <div class="p-${size}"></div>
 ```
 
-For that, you will need to specify the possible combinations in the `safelist` option of `windi.config.js`.
+Para isto, precisarás de especificar as possíveis combinações ma opção `safelist` do ficheiro `windi.config.js`.
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -32,7 +30,7 @@ export default defineConfig({
 })
 ```
 
-Or to be more flexible:
+Ou ser mais flexível:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -49,19 +47,18 @@ export default defineConfig({
 })
 ```
 
-## Scanning
+## Exame de Recursos
 
-When the dev-server/build process starts, Windi CSS will scan your source code and extract utility usages.
-By default, it will scan files under `src/` with extensions `vue, html, mdx, pug, jsx, tsx`.
+Quando o processo do servidor de desenvolvimento ou construção começar, a Windi CSS examinará o teu código-fonte e extrairá os usos de utilitários. Por padrão, ela examinará os ficheiros sob `src/` com as extensões `vue, html, mdx, pug, jsx, tsx`.
 
-If you want to enable/disable scanning for other file-types or locations, you can configure it using `include` and `exclude` options:
+Se quiseres ativar ou desativar o exame para os outros tipos de ficheiro ou localizações, podes configurar isto usando as opções `include` e `exclude`:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   extract: {
-    // accepts globs and file paths relative to project root
+    // aceita globais e caminhos de ficheiro relativo à raiz do projeto
     include: [
       'index.html',
       'src/**/*.{vue,html,jsx,tsx}',
@@ -76,9 +73,9 @@ export default defineConfig({
 
 ### Preflight
 
-Preflight (style resetting) is also enabled on-demand with scanning.
+Preflight (redefinição de estilo) também é ativada sobre demanda com o exame.
 
-You can disable it completely in the configuration:
+Tu podes desativá-lo completamente na configuração:
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
@@ -88,7 +85,7 @@ export default defineConfig({
 })
 ```
 
-Or explicitly enable it with safelisting:
+Ou explicitamente ativá-lo com alistamento seguro (`safelist`):
 
 ```ts windi.config.js
 import { defineConfig } from 'windicss/helpers'
