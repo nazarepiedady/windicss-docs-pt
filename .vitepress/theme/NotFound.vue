@@ -4,7 +4,7 @@
       404
     </h1>
     <h2 class="!m-0 !-mt-15 !md:-mt-20 w-full text-center !text-3xl text-stroke-sm uppercase tracking-0.5em pl-3">
-      Page Not Found
+      Página Não Encontrada
     </h2>
   </div>
 </template>
