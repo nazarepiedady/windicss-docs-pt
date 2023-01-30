@@ -1,37 +1,37 @@
-[speed comparison]: https://twitter.com/antfu7/status/1361398324587163648
-[CSS directives]: /features/directives
-[classes utilities]: /utilities/
-[migration]: /guide/migration
+[comparação de velocidade]: https://twitter.com/antfu7/status/1361398324587163648
+[diretivas de CSS]: /features/directives
+[utilitários de classes]: /utilities/
+[migração]: /guide/migration
 
 <Logo name="vite" class="logo-float-xl"/>
 
-# Integration for [Vite](https://vitejs.dev)
+# Integração para a [Vite](https://vitejs.dev)
 
 <PackageInfo name="vite-plugin-windicss" author="antfu" />
 
-## Features
+## Funcionalidades
 
-- ⚡️ **It's FAST** - 20~100x times faster than Tailwind on Vite
-- 🧩 On-demand CSS utilities (Fully compatible with Tailwind CSS v2)
-- 📦 On-demand native elements style resetting (preflight)
-- 🔥 Hot module replacement (HMR)
-- 🍃 Load configurations from `tailwind.config.js`
-- 🤝 Framework-agnostic - Vue, React, Svelte and vanilla!
-- 📄 CSS `@apply` / `@screen` directives transforms (also works for Vue SFC's `<style>`)
-- 🎳 Support Variant Groups - e.g. `bg-gray-200 hover:(bg-gray-100 text-red-300)`
-- 😎 ["Design in Devtools"](#design-in-devtools) - if you work this way in the traditional Tailwind, no reason we can't!
+- ⚡️ **É RÁPIDA** - 20~100x vezes mais rápida do que a Tailwind sobre a Vite
+- 🧩 Utilitários de CSS sobre demanda (Completamente compatível com a Tailwind CSS v2)
+- 📦 Redefinição de estilo de elementos nativos sobre demanda (preflight)
+- 🔥 Substituição de módulo instantânea (HMR, sigla em Inglês)
+- 🍃 Carrega as configurações a partir do `tailwind.config.js`
+- 🤝 Agnóstica de abstração - Vue, React, Svelte e Vanilla!
+- 📄 Transformações de diretivas `@apply` / `@screen` de CSS (também funcionam para `<style>` dos Componentes de Ficheiro Único de Vue)
+- 🎳 Suporta para grupos de variante - por exemplo, `bg-gray-200 hover:(bg-gray-100 text-red-300)`
+- 😎 ["Desenhe nas Ferramentas de Programação"](#desenhe-nas-ferramentas-de-programação) - se trabalhas desta maneira na Tailwind tradicional, não existe razão de não podermos!
 
-> Check out the [speed comparison] between Windi CSS and Tailwind CSS on Vite.
+> Consulte a [comparação de velocidade] entre a Windi CSS e a Tailwind CSS sobre a Vite.
 
-## Install
+## Instalar
 
-Install the package:
+Instale o pacote:
 
 ```bash
 npm i -D vite-plugin-windicss windicss
 ```
 
-Then, install the plugin in your Vite configuration:
+Depois, instale a extensão na tua configuração da Vite:
 
 ```ts vite.config.js
 import WindiCSS from 'vite-plugin-windicss'
@@ -43,23 +43,23 @@ export default {
 }
 ```
 
-And finally, import `virtual:windi.css` in your Vite entries:
+E finalmente, importe `virtual:windi.css` nas tuas entradas de Vite:
 
 ```js main.js
 import 'virtual:windi.css'
 ```
 
-That's it! Starting using [classes utilities] or [CSS directives] in your app, and enjoy the speed! ⚡️
+E é isto! Comece a usar os [utilitários de classes] ou [diretivas de CSS] na tua aplicação, e desfrute da velocidade! ⚡️
 
-> If you are migrating from Tailwind CSS, also check out the [_Migration_ section][migration]
+> Se estiveres a migrar da Tailwind CSS, consulte também a [_seção de Migração_][migração]
 
-## Supports
+## Suportes
 
 ### TypeScript
 
-Enable TypeScript for your `windi.config.js`? Sure, why not?
+Ativar a TypeScript para o teu `windi.config.js`? Claro, porquê não?
 
-Rename it to `windi.config.ts` and things just work!
+Mude o seu nome para `windi.config.ts` e as coisas já funcionam!
 
 ```ts windi.config.ts
 import { defineConfig } from 'windicss/helpers'
@@ -81,11 +81,11 @@ export default defineConfig({
 })
 ```
 
-### Pug Support
+### Suporte ao Pug
 
-It will automatically enable Pug support for `.pug` and Vue SFC when dependency `pug` is found in the workspace.
+Ela ativará automaticamente o suporte ao Pug para `.pug` e `.vue` quando a dependência `pug` for encontrada na área de trabalho. 
 
-### "Design in DevTools"
+### "Desenhe nas Ferramentas de Programação"
 
 It might be a common practice when you use the purge-based Tailwind where you have all the classes in your browser and you can try how things work by directly changing the classes in DevTools. While you might think this is some kind of limitation of "on-demand" where the DevTools don't know those you haven't used in your source code yet.
 
