@@ -1,26 +1,26 @@
 <Logo name="windi" class="logo-float-xl"/>
 
-# Windi CSS CLI
+# Interface da Linha de Comando da Windi CSS
 
 <PackageInfo name="windicss" author="voorjaar" />
 
-## Install
+## Instalar
 
-Add the package:
+Adicionar o pacote:
 
 ```bash
 npm i -g windicss
 ```
 
-## Usage
+## Uso
 
-### Print Help Message
+### Imprimir a Mensagem de Ajuda
 
 ```bash
 windicss --help  // windicss -h
 ```
 
-should print the help message like bellow.
+deve imprimir a mensagem de ajuda como abaixo.
 
 ```bash
 Generate css from text files that containing windi classes.
@@ -55,16 +55,16 @@ Options:
   --init PATH           Start a new project on the path.
 ```
 
-### Initial Test Project
+### Projeto Inicial de Teste
 
 ```bash
 windicss --init <project>  // windicss --init .
 windicss --init <project> --compile  // windicss --init hello_world --compile
 ```
 
-### File Names
+### Nomes de Ficheiro
 
-The `[filenames]` parameter can include filepaths and glob patterns(powerd by [node-glob](https://github.com/isaacs/node-glob)).
+O parâmetro `[filenames]` pode incluir caminhos de ficheiro e padrões glob (alimentado pelo [node-glob](https://github.com/isaacs/node-glob)).
 
 ```bash
 windicss './hello.html' './world.html'
@@ -73,11 +73,11 @@ windicss './src/**/*.html'
 windicss './hello.html' './world.html', './src/**/*.svelte'
 ```
 
-### Compile CSS File
+### Compilar o Ficheiro de CSS
 
-#### Generate normal css
+#### Gerar o CSS Normal
 
-Use the `-o` parameter to specify the name of the generated CSS file, and the `-t` parameter to specify whether to add preflight (basestyles).
+Use o parâmetro `-o` para especificar o nome do ficheiro de CSS gerado, e o parâmetro `-t` para especificar se adiciona o preflight (estilos de base).
 
 ```bash
 windicss './**/*.html'
@@ -86,18 +86,18 @@ windicss './test.html' -to windi.css
 windicss './test.html' --preflight --output windi.css
 ```
 
-#### Minimize build
+#### Minimizar a Construção
 
-Use `-m` or `--minify` to generate minimized CSS file. This parameter is mostly used for build time.
+Use `-m` ou `--minify` para gerar o ficheiro de CSS minimizado. Este parâmetro é maioritariamente usado para o momento da construção.
 
 ```bash
 windicss './**/*.html' -mto windi.min.css
 windicss './**/*.html' -to windi.css --minify
 ```
 
-#### Using compilation mode
+#### Usando o Modo de Compilação
 
-Compilation mode will combine all windi utilities into a new class, which you can specify with `-p` or `--prefix`
+O modo de compilação combinará todos os utilitários da windi em uma nova classe, que podes especificar com `-p` ou `--prefix`
 
 ```bash
 windicss './**/*.html' -cto windi.css
@@ -107,7 +107,7 @@ windicss './**/*.html' -cto windi.css --minify --prefix 'tw-'
 windicss './test.html' --compile --preflight --output windi.css
 ```
 
-Give an example
+Dar um exemplo
 
 ```html
 <div class="windi-15wa4me">
@@ -126,9 +126,9 @@ Give an example
 </div>
 ```
 
-#### Using attributify mode
+#### Usando o Modo `attributify`
 
-You can combine attributify mode with interpretation mode or compilation mode.
+Tu podes combinar o modo `attributify` com o modo de interpretação ou modo de compilação.
 
 ```bash
 windicss './**/*.html' -ato windi.css
@@ -138,7 +138,7 @@ windicss './test.html' --attributify --preflight --output windi.css
 windicss './test.html' --attributify --compile --preflight --output windi.css
 ```
 
-Give an example
+Dar um exemplo
 
 ```html
 <button
@@ -152,15 +152,15 @@ Give an example
 </button>
 ```
 
-#### Pass a config file
+#### Passar um Ficheiro de Configuração
 
-Pass a configuration file with the `-f` or `--config` parameter, currently only js configuration files are supported.
+Passe um ficheiro de configuração com o parâmetro `-f` ou `--config`, atualmente apenas os ficheiros de configuração de JavaScript são suportados.
 
 ```bash
 windicss './**/*.html' -to windi.css --config windi.config.js
 ```
 
-Give an example
+Dar um exemplo
 
 ```js windi.config.js
 module.exports = {
@@ -176,25 +176,25 @@ module.exports = {
 }
 ```
 
-#### Dev mode
+#### Modo de Desenvolvimento
 
-Development mode will turn on hot reloading and will watch your file changes to update your CSS file in real time.
+O modo de desenvolvimento liga o recarregamento instantâneo e observará as mudanças do teu ficheiro para atualizar o teu ficheiro em tempo real.
 
 ```bash
 windicss './**/*.html' -to windi.css --dev
 ```
 
-> Note: For better hotloading experience (~5ms) we don't remove built CSS at development time, so you are expected to rebuild it once at release time using the minimize command to get the best experience for both development and build. Such as `windicss './**/*.html' -mto windi.css`
+> Nota: Para uma experiência melhor de recarregamento instantâneo (~5ms) não removemos o CSS construído no momento do desenvolvimento, assim és esperado para reconstruí-lo uma vez no momento do lançamento usando o comando de minimizar para conseguires a melhor experiência para ambos desenvolvimento e construção. Tal como `windicss './**/*.html' -mto windi.css`
 
-#### Fuzzy mode
+#### Modo `fuzzy`
 
-By default windi matches class/className='...' in the incoming files, if your file type doesn't match, you can turn this option on. It will match all possible windi utilities contained in the file
+Por padrão a windi corresponde a `class/className='...'` nos ficheiros de chegada, se o tipo do teu ficheiro não corresponder, podes ligar esta opção. Ela corresponderá todos utilitários possíveis contidos no ficheiro
 
 ```bash
 windicss './**/*.html' -to windi.css --dev --fuzzy
 ```
 
-You can also configure `extractors` for specific file types
+Tu podes também configurar o `extractors` para tipos de ficheiro específicos
 
 ```js windi.config.js
 module.exports = {
@@ -213,15 +213,15 @@ module.exports = {
 }
 ```
 
-#### Style block
+#### Bloco `style`
 
-To enable style block, you need to use `--style` arg.
+Para ativar o bloco de estilo, precisas usar a opção `--style`.
 
 ```bash
 windicss './**/*.html' -to windi.css --dev --style
 ```
 
-Define style block like this:
+Defina o bloco de estilo como este:
 
 ```html
 <head>
