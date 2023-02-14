@@ -1,46 +1,47 @@
 <Logo name="javascript" class="logo-float-xl"/>
 
-# Windi CSS JavaScript API
+# API de JavaScript da Windi CSS
 
 <PackageInfo name="windicss" author="voorjaar" />
 
-## About
+## Sobre
 
-If using the CLI does not fit your workflow, you could directly use the Windi CSS API.
+Se o uso da interface da linha de comando não se ajusta ao teu fluxo de trabalho, poderias usar diretamente a API da Windi CSS.
 
-## Install
+## Instalar
 
-Add the package:
+Adicionar o pacote:
 
 ```bash
 npm i -D windicss
 ```
 
-## Usage
+## Uso
 
-### Setup with interpret mode
+### Configurar com o modo de interpretação
+
 
 ```js
 const { Processor } = require('windicss/lib')
 const { HTMLParser } = require('windicss/utils/parser')
 
 export function generateStyles(html) {
-  // Get windi processor
+  // Receber o processador da windi
   const processor = new Processor()
 
-  // Parse all classes and put into one line to simplify operations
+  // Analisar todas as classes e colocá-las em uma linha para simplificar as operações
   const htmlClasses = new HTMLParser(html)
     .parseClasses()
     .map(i => i.result)
     .join(' ')
 
-  // Generate preflight based on the HTML we input
+  // Gerar o preflight baseada na HTML que introduzimos
   const preflightSheet = processor.preflight(html)
 
-  // Process the HTML classes to an interpreted style sheet
+  // Processar as classes da HTML para uma folha de estilo interpretada
   const interpretedSheet = processor.interpret(htmlClasses).styleSheet
 
-  // Build styles
+  // Construir os estilos
   const APPEND = false
   const MINIFY = false
   const styles = interpretedSheet.extend(preflightSheet, APPEND).build(MINIFY)
@@ -49,24 +50,24 @@ export function generateStyles(html) {
 }
 ```
 
-### Setup with compile mode
+### Configurar com o modo de compilação
 
-Compile mode requires a bit more leg work to swap out the compiled classnames for the current ones.
+O modo de compilação exige um pouco mais de trabalho de perna para trocar os nomes de classe compilados para os atuais.
 
-Read more about compile mode [here](/posts/modes.html).
+Leia mais sobre o [modo de compilação](/posts/modes.html).
 
 ```js
 const { Processor } = require('windicss/lib')
 const { HTMLParser } = require('windicss/utils/parser')
 
 export function generateStyles(html) {
-  // Get windi processor
+  // Receber o processador da windi
   const processor = new Processor()
 
-  // Parse HTML to get array of class matches with location
+  // Analisar o HTML para receber o arranjo das correspondências de classe com a localização
   const parser = new HTMLParser(html)
 
-  // Generate preflight based on the HTML we input
+  // Gerar o preflight baseado no HTML que introduzimos
   const preflightSheet = processor.preflight(html)
 
   const PREFIX = 'windi-'
@@ -75,29 +76,29 @@ export function generateStyles(html) {
   let indexStart = 0
 
   parser.parseClasses().forEach((p) => {
-    // add HTML substring from index to match start
+    // adicionar subsequência de caracteres do índice para corresponder o início
     outputHTML += html.substring(indexStart, p.start)
 
-    // generate stylesheet
+    // gerar a folha de estilo
     const style = processor.compile(p.result, PREFIX)
 
-    // add the styleSheet to the styles stack
+    // adicionar a folha de estilo à pilha de estilos
     outputCSS.push(style.styleSheet)
 
-    // append ignored classes and push to output
+    // anexar as classes ignoradas e empurrar para a saída
     outputHTML += [style.className, ...style.ignored].join(' ')
 
-    // mark the end as our new start for next iteration
+    // marcar o final como nosso novo início para a próxima iteração
     indexStart = p.end
   })
 
-  // append the remainder of html
+  // anexar o resto do html
   outputHTML += html.substring(indexStart)
 
-  // Build styles
+  // Construir os estilos
   const MINIFY = false
   const styles = outputCSS
-    // extend the preflight sheet with each sheet from the stack
+    // estender a folha de preflight com cada folha da pilha
     .reduce((acc, curr) => acc.extend(curr), preflightSheet)
     .build(MINIFY)
 
@@ -108,56 +109,56 @@ export function generateStyles(html) {
 }
 ```
 
-### Setup with attributify mode
+### Configurar com o modo `attributify`
 
-Attributify mode requires a bit more leg work to parse each individual attribute.
+O modo `attributify` exige um pouco mais de trabalho de perna para analisar cada atributo individual.
 
-Read more about attributify mode [here](/posts/v30.html#attributify-mode)
-And you can find the syntax [here](/posts/attributify.html)
+Leia mais sobre o [modo `attributify`](/posts/v30.html#attributify-mode)
+E podes encontrar a [sintaxe nesta ligação](/posts/attributify.html)
 
 ```js
 const { Processor } = require('windicss/lib')
 const { HTMLParser } = require('windicss/utils/parser')
 
 export function generateStyles(html) {
-  // Get windi processor
+  // Receber o processador da windi
   const processor = new Processor()
 
-  // Parse HTML to get array of class matches with location
+  // Analisar o HTML para receber o arranjo das correspondências de classe com a localização
   const parser = new HTMLParser(html)
 
-  // Generate preflight based on the HTML we input
+  // Gerar o preflight baseado no HTML que introduzimos
   const preflightSheet = processor.preflight(html)
 
-  // Always returns array
+  // Sempre retornar um arranjo
   const castArray = val => (Array.isArray(val) ? val : [val])
 
   const attrs = parser.parseAttrs().reduceRight((acc, curr) => {
-    // get current match key
+    // receber a chave da correspondência atual
     const attrKey = curr.key
 
-    // ignore class or className attributes
+    // ignorar os atributos `class` ou `className`
     if (attrKey === 'class' || attrKey === 'className') return acc
 
-    // get current match value as array
+    // receber o valor da correspondência atual como arranjo
     const attrValue = castArray(curr.value)
 
-    // if current match key is already in accumulator
+    // se a chave da correspondência atual já estiver no acumulador
     if (attrKey in acc) {
-      // get current attr key value as array
+      // receber o valor da chave do atributo atual como arranjo
       const attrKeyValue = castArray(acc[attrKey])
 
-      // append current value to accumulator value
+      // anexar o valor atual ao valor do acumulador
       acc[attrKey] = [...attrKeyValue, ...attrValue]
     } else {
-      // else add attribute value array to accumulator
+      // ou então adicionar o arranjo do valor do atributo ao acumulador
       acc[attrKey] = attrValue
     }
 
     return acc
   }, {})
 
-  // Build styles
+  // Construir os estilos
   const MINIFY = false
   const styles = processor
     .attributify(attrs)
